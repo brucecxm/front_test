@@ -1,0 +1,12 @@
+$primary-color: #3498db;
+$padding: 20px;
+
+body {
+  background-color: $primary-color;
+  padding: $padding;
+}
+
+h1 {
+  font-size: 2em;
+  color: darken($primary-color, 20%);
+}

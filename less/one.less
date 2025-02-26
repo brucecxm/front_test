@@ -1,0 +1,106 @@
+// style.less
+@primary-color: #4caf50;
+// 定义变量
+// 定义变量
+// 定义变量
+// 定义变量
+@box_less_variable: 20vh;
+
+@box_mid_variable: 5vh;
+
+// 嵌套语法
+// 嵌套语法
+// 嵌套语法
+// 嵌套语法
+.box_less_one {
+  width: @box_less_variable;
+  height: @box_less_variable;
+  background-color: red;
+  .lev_one_one {
+    // 运算
+    // 运算
+    // 运算
+    // 运算
+    width: @box_mid_variable*10;
+    height: @box_mid_variable*100;
+    background-color: yellow;
+  }
+  .lev_one_two {
+    width: @box_mid_variable;
+    height: @box_mid_variable;
+    background-color: green;
+    position: relative;
+    right: 0px;
+    bottom: 0px;
+
+    .lev_one_two_one {
+      width: 3vh;
+      height: 3vh;
+      background-color: black;
+      position: absolute;
+      right: 0px;
+    }
+  }
+}
+
+h1 {
+  color: @primary-color;
+  text-align: center;
+}
+
+body {
+}
+p {
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+}
+
+// ***************************************
+
+// 混合 相当于定义一个函数 被调用
+// 混合 相当于定义一个函数 被调用
+// 混合 相当于定义一个函数 被调用
+// 混合 相当于定义一个函数 被调用
+.function_one(@w,@h,@bc) {
+  width: @w;
+  height: @h;
+  background-color: @bc;
+}
+
+.mixins {
+  // 使用函数  前面的混合
+  // 使用函数  前面的混合
+  // 使用函数  前面的混合
+  // 使用函数  前面的混合
+  .function_one(100px,200px,rgb(18, 246, 37));
+}
+// ***************************************
+
+//条件语句
+//条件语句
+//条件语句
+// ***************************************
+// 循环
+// 循环
+// 循环
+// 使用循环创建多个类
+.class-all {
+  height: 2px;
+  background-color: aqua;
+}
+@counter: 1; // 定义一个变量 @counter，初始值为 1
+
+// 定义一个递归循环的 mixin，命名为 .loop
+.loop(@counter) when (@counter <= 1000) {
+  // 该 miexin 会在 @counter 小于等于 10 时继续执行
+  .class-@{counter} {
+    // 创建一个 class，使用 @counter 作为类名的一部分，例如 class-1, class-2 等
+    width: @counter * 2px; // 设置每个类的宽度为 @counter * 20px
+  }
+  .loop(@counter + 1); // 递归调用 .loop，@counter 的值递增 1
+}
+
+// 启动循环，初始值为 1
+.loop(@counter);
+// ***************************************
