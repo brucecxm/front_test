@@ -1,0 +1,48 @@
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+module.exports = {
+  entry: {
+    index: './src/index.js',
+    about: './src/about.js'
+  },
+  output: {
+    filename: '[name].[contenthash].js', // 生成哈希文件名
+    path: path.resolve(__dirname, 'dist') // 输出路径
+  },
+  mode: 'development',  // 开发模式
+  module: {
+    rules: [
+      {
+        test: /\.css$/, // 处理 .css 文件
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html', // 指定 HTML 模板
+      filename: 'index.html',  // 输出的文件名
+      minify: { collapseWhitespace: true } // 压缩 HTML
+    }),
+    new BundleAnalyzerPlugin() // 运行时自动打开分析界面
+  ]
+};
+
+
+暂时不用的
+暂时不用的
+暂时不用的
+暂时不用的
+暂时不用的
+暂时不用的
+暂时不用的
+暂时不用的
+
+
+//   "test": "echo \"Error: no test specified\" && exit 1",
+//   // "build": "webpack",
+//   // "start": "webpack serve --open",
+//   "start": "webpack serve --config webpack.dev.js", // 开发模式
+//   "build": "webpack --config webpack.prod.js" // 生产模式
+// },
