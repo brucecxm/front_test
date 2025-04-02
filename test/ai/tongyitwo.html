@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>银行APP界面</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 顶部导航栏 */
+    .top-navbar {
+      height: 9vh;
+      /* 200px */
+      background-color: #2c3e50;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #1a252f;
+    }
+
+    /* 资产信息区域 */
+    .asset-info {
+      height: 12.3vh;
+      /* 280px */
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    /* 存款分类区域 */
+    .deposit-classification {
+      height: 8vh;
+      /* 180px */
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .classification-item {
+      width: 33.33%;
+      height: 100%;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    /* 推荐存款产品区域 */
+    .recommended-deposit {
+      height: 15.4vh;
+      /* 350px */
+      background-color: #ff6b6b;
+      color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    /* 定期存款列表区域 */
+    .fixed-deposit-list {
+      height: 26.31vh;
+      /* 600px */
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .deposit-item {
+      height: 13.16vh;
+      /* 300px */
+      background-color: #e9ecef;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 20px;
+    }
+
+    /* 底部导航栏 */
+    .bottom-navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 6.6vh;
+      /* 150px */
+      background-color: #f8f9fa;
+      border-top: 1px solid #dee2e6;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background-color: #e9ecef;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    /* 内容容器（排除底部导航高度） */
+    .content {
+      flex: 1;
+      padding-bottom: 6.6vh;
+      /* 底部导航高度 */
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="top-navbar">
+    <div>返回</div>
+    <div>银行LOGO</div>
+  </header>
+
+  <!-- 主内容区域 -->
+  <main class="content">
+    <!-- 资产信息 -->
+    <section class="asset-info">
+      <div>我的资产：¥100,000</div>
+      <div>最新理财收益：+¥500</div>
+    </section>
+
+    <!-- 存款分类 -->
+    <section class="deposit-classification">
+      <div class="classification-item">存款</div>
+      <div class="classification-item">理财</div>
+      <div class="classification-item">全能存款</div>
+    </section>
+
+    <!-- 推荐存款产品 -->
+    <section class="recommended-deposit">
+      <div>推荐产品：年利率4.5%</div>
+      <button>立即购买</button>
+    </section>
+
+    <!-- 定期存款列表 -->
+    <section class="fixed-deposit-list">
+      <div class="deposit-item">
+        <div>产品名称：定期存款A</div>
+        <div>利率：3.8%</div>
+        <button>立即购买</button>
+      </div>
+      <div class="deposit-item">
+        <div>产品名称：定期存款B</div>
+        <div>利率：4.2%</div>
+        <button>立即购买</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 底部导航栏 -->
+  <footer class="bottom-navbar">
+    <div class="nav-btn">首页</div>
+    <div class="nav-btn">理财</div>
+    <div class="nav-btn">存款</div>
+    <div class="nav-btn">我的</div>
+  </footer>
+</body>
+
+</html>

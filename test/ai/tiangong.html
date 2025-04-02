@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>银行APP界面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f5f5;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    /* 公共样式 */
+    .box {
+      width: 100%;
+      background: white;
+      margin-bottom: 2vh;
+      padding: 2vh 4vw;
+    }
+
+    /* 顶部导航栏 */
+    .header {
+      height: 8.77vh;
+      /* 200/2280 */
+      background: #1a237e;
+      position: relative;
+    }
+
+    /* 资产信息区域 */
+    .assets {
+      height: 12.28vh;
+      /* 280/2280 */
+      border-radius: 2vh;
+    }
+
+    /* 分类导航 */
+    .category-box {
+      height: 7.89vh;
+      /* 180/2280 */
+      display: flex;
+      gap: 3%;
+    }
+
+    .category-item {
+      flex: 1;
+      height: 100%;
+      background: #e8eaf6;
+      border-radius: 1.5vh;
+    }
+
+    /* 推荐产品 */
+    .highlight-product {
+      height: 15.35vh;
+      /* 350/2280 */
+      background: #d32f2f;
+      border-radius: 2vh;
+      color: white;
+    }
+
+    /* 定期产品列表 */
+    .product-list {
+      min-height: 26.32vh;
+      /* 600/2280 */
+      padding: 0 !important;
+    }
+
+    .product-item {
+      height: 13.16vh;
+      /* 300/2280 */
+      border-bottom: 1px solid #eee;
+      padding: 2vh 4vw;
+    }
+
+    /* 底部导航 */
+    .footer-nav {
+      height: 6.58vh;
+      /* 150/2280 */
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      background: white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .nav-item {
+      flex: 1;
+      text-align: center;
+      margin: 0.5vh 0;
+    }
+
+    /* 隐藏内容指示 */
+    .scroll-indicator {
+      height: 3vh;
+      text-align: center;
+      color: #666;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ① 顶部导航 -->
+  <div class="header box"></div>
+
+  <!-- ② 资产信息 -->
+  <div class="assets box">
+    <h2>我的资产</h2>
+    <p>最新理财收益</p>
+  </div>
+
+  <!-- ③ 分类区域 -->
+  <div class="category-box box">
+    <div class="category-item"></div>
+    <div class="category-item"></div>
+    <div class="category-item"></div>
+  </div>
+
+  <!-- ④ 推荐产品 -->
+  <div class="highlight-product box">
+    <h3>推荐存款产品</h3>
+    <button style="width:30%; height:4vh; border-radius:2vh; margin-top:2vh">立即购买</button>
+  </div>
+
+  <!-- ⑤ 定期产品列表 -->
+  <div class="product-list box">
+    <div class="product-item">
+      <h4>3个月定期存款</h4>
+      <p>年化利率 2.5%</p>
+    </div>
+    <div class="product-item">
+      <h4>6个月定期存款</h4>
+      <p>年化利率 3.0%</p>
+    </div>
+    <!-- 滚动隐藏内容 -->
+    <div class="scroll-indicator">继续滑动查看更多产品</div>
+  </div>
+
+  <!-- ⑥ 底部导航 -->
+  <div class="footer-nav">
+    <div class="nav-item">首页</div>
+    <div class="nav-item">理财</div>
+    <div class="nav-item">存款</div>
+    <div class="nav-item">我的</div>
+  </div>
+
+  <!-- ⑦ 隐藏内容（通过滚动查看） -->
+</body>
+
+</html>

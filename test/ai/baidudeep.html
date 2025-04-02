@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh" style="font-size: 16px;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    :root {
+      --screen-height: 100vh;
+      --screen-width: 100vw;
+      --nav-height: calc(200 / 2280 * var(--screen-height));
+      /* 顶部导航 */
+      --bottom-nav-height: calc(150 / 2280 * var(--screen-height));
+      /* 底部导航 */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      background: #f0f2f5;
+    }
+
+    /* 主滚动容器 */
+    .scroll-container {
+      width: var(--screen-width);
+      height: calc(var(--screen-height) - var(--bottom-nav-height));
+      overflow-y: auto;
+      padding-bottom: 2vh;
+    }
+
+    /* 顶部导航栏 */
+    .top-nav {
+      width: 100%;
+      height: var(--nav-height);
+      background: #1a237e;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* 资产信息区域 */
+    .assets-section {
+      width: 94%;
+      height: calc(280 / 2280 * var(--screen-height));
+      margin: 1vh 3%;
+      background: #ffffff;
+      border-radius: 1.5vw;
+      box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.05);
+    }
+
+    /* 分类按钮容器 */
+    .category-container {
+      width: 94%;
+      height: calc(180 / 2280 * var(--screen-height));
+      margin: 1vh 3%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2vw;
+    }
+
+    .category-btn {
+      background: #fff;
+      border-radius: 2vw;
+      box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.05);
+    }
+
+    /* 高亮产品区域 */
+    .highlight-product {
+      width: 94%;
+      height: calc(350 / 2280 * var(--screen-height));
+      margin: 2vh 3%;
+      background: #d32f2f;
+      border-radius: 2.5vw;
+    }
+
+    /* 定期存款列表 */
+    .deposit-list {
+      width: 94%;
+      min-height: calc(600 / 2280 * var(--screen-height));
+      margin: 0 3%;
+    }
+
+    .deposit-item {
+      width: 100%;
+      height: calc(280 / 2280 * var(--screen-height));
+      margin: 1.5vh 0;
+      background: #fff;
+      border-radius: 2vw;
+    }
+
+    /* 底部导航栏 */
+    .bottom-nav {
+      width: 100%;
+      height: var(--bottom-nav-height);
+      background: #fff;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      border-top: 1px solid #eee;
+    }
+
+    .nav-item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 隐藏内容指示器 */
+    .scroll-indicator {
+      width: 100%;
+      height: 4vh;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scroll-container">
+    <nav class="top-nav"></nav>
+
+    <section class="assets-section"></section>
+
+    <div class="category-container">
+      <div class="category-btn"></div>
+      <div class="category-btn"></div>
+      <div class="category-btn"></div>
+    </div>
+
+    <div class="highlight-product"></div>
+
+    <div class="deposit-list">
+      <div class="deposit-item"></div>
+      <div class="deposit-item"></div>
+      <div class="deposit-item"></div>
+    </div>
+
+    <div class="scroll-indicator">上滑查看更多内容</div>
+  </div>
+
+  <nav class="bottom-nav">
+    <div class="nav-item"></div>
+    <div class="nav-item"></div>
+    <div class="nav-item"></div>
+    <div class="nav-item"></div>
+  </nav>
+</body>
+
+</html>

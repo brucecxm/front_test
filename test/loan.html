@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贷款页面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 375px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .header {
+      background: red;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .loan-amount {
+      background: pink;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .loan-amount h1 {
+      font-size: 24px;
+    }
+
+    .loan-amount button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      background: lightgray;
+      padding: 15px;
+    }
+
+    .menu div {
+      background: gray;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      width: 80px;
+      border-radius: 5px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 8vh;
+      background: gray;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    .banner {
+      background: orange;
+      padding: 20px;
+      text-align: center;
+      margin: 10px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    .nav-item {
+      width: 20vw;
+      height: 5vh;
+      background: white;
+    }
+
+    .recommend {
+      background: lightgray;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .recommend div {
+      background: white;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">乌海贷 幸福不等贷</div>
+    <div class="loan-amount">
+      <h1>30,000.00</h1>
+      <p>最高可借额度（元）</p>
+      <button>立即申请</button>
+    </div>
+    <div class="menu">
+      <div>贷款申请</div>
+      <div>我的贷款</div>
+      <div>授信卡</div>
+      <div>全部功能</div>
+    </div>
+    <div class="banner">乌海银行普惠小微贷</div>
+    <div class="recommend">
+      <div>移动协议贷 年利率低至 5.55%</div>
+      <div>薪保贷 年利率低至 6.725%</div>
+    </div>
+    <div class="footer">
+      <div class="nav-item"></div>
+      <div class="nav-item"></div>
+      <div class="nav-item"></div>
+      <div class="nav-item"></div>
+    </div>
+  </div>
+</body>
+
+</html>

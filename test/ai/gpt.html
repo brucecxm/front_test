@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI 结构示例</title>
+  <style>
+    /* 重置默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      overflow-x: hidden;
+    }
+
+    /* 主容器：垂直排列、允许竖向滚动 */
+    .container {
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      /* 下方底部导航为 fixed，所以预留底部内边距 */
+      padding-bottom: calc(150px / 2280 * 100vh);
+    }
+
+    /* 盒子①：顶部导航栏 */
+    .nav-top {
+      background-color: #007bff;
+      /* 示例背景色 */
+      height: calc(200 / 2280 * 100vh);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 2%;
+      color: #fff;
+    }
+
+    /* 盒子②：资产信息区域 */
+    .asset-info {
+      background-color: #fff;
+      height: calc(280 / 2280 * 100vh);
+      width: 100%;
+      padding: 1%;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* 盒子③：存款/理财/全能存款分类区域 */
+    .classification {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #fafafa;
+      height: calc(180 / 2280 * 100vh);
+      width: 100%;
+    }
+
+    .classification .btn {
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      /* 使用 vw 来近似转换宽度，1080px 对应 100vw */
+      width: calc(340 / 1080 * 100vw);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1em;
+    }
+
+    /* 盒子④：推荐存款产品（高亮利率区域） */
+    .recommend {
+      background-color: #ff4d4f;
+      height: calc(350 / 2280 * 100vh);
+      width: 100%;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+    }
+
+    /* 盒子⑤：定期存款列表 */
+    .deposit-list {
+      background-color: #fff;
+      height: calc(600 / 2280 * 100vh);
+      width: 100%;
+      padding: 1%;
+      overflow-y: auto;
+    }
+
+    .deposit-item {
+      background-color: #f9f9f9;
+      height: calc(300 / 2280 * 100vh);
+      width: 100%;
+      margin-bottom: 1%;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      padding: 1%;
+    }
+
+    /* 盒子⑥：底部导航栏，固定在底部 */
+    .nav-bottom {
+      background-color: #fff;
+      height: calc(150 / 2280 * 100vh);
+      width: 100%;
+      border-top: 1px solid #ddd;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    .nav-bottom .nav-item {
+      flex: 1;
+      text-align: center;
+      font-size: 1em;
+      color: #333;
+    }
+
+    /* 盒子⑦：其他额外信息（可滑动区域，可根据需要追加内容） */
+    .extra-info {
+      background-color: #fff;
+      padding: 1%;
+      margin-top: 1%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- ① 顶部导航栏 -->
+    <div class="nav-top">
+      <div class="back-button">←</div>
+      <div class="logo" style="margin-left: 10px;">银行 LOGO</div>
+    </div>
+
+    <!-- ② 资产信息区域 -->
+    <div class="asset-info">
+      <div class="my-assets">
+        <h2>我的资产</h2>
+        <p>资产详情...</p>
+      </div>
+      <div class="latest-income" style="margin-top: 10px;">
+        <h3>最新理财收益</h3>
+        <p>收益详情...</p>
+      </div>
+    </div>
+
+    <!-- ③ 存款/理财/全能存款分类区域 -->
+    <div class="classification">
+      <div class="btn">存款</div>
+      <div class="btn">理财</div>
+      <div class="btn">全能存款</div>
+    </div>
+
+    <!-- ④ 推荐存款产品 -->
+    <div class="recommend">
+      <span>推荐存款产品</span>
+    </div>
+
+    <!-- ⑤ 定期存款列表 -->
+    <div class="deposit-list">
+      <div class="deposit-item">
+        <div>定期存款产品 1</div>
+      </div>
+      <div class="deposit-item">
+        <div>定期存款产品 2</div>
+      </div>
+    </div>
+
+    <!-- ⑦ 其他额外信息，可滑动查看更多 -->
+    <div class="extra-info">
+      <p>更多存款选项...</p>
+    </div>
+
+    <!-- ⑥ 底部导航栏（固定） -->
+    <div class="nav-bottom">
+      <div class="nav-item">首页</div>
+      <div class="nav-item">存款</div>
+      <div class="nav-item">理财</div>
+      <div class="nav-item">我的</div>
+    </div>
+  </div>
+</body>
+
+</html>

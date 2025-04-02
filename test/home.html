@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 8vh;
+        }
+
+        .header {
+            width: 100%;
+            height: 8vh;
+            background: red;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5vw;
+        }
+
+        .search-bar {
+            width: 60vw;
+            height: 5vh;
+            background: yellow;
+        }
+
+        .icon-box {
+            width: 5vw;
+            height: 5vh;
+            background: blue;
+        }
+
+        .banner {
+            width: 100%;
+            height: 20vh;
+            background: pink;
+            border-bottom-left-radius: 50% 5vh;
+            border-bottom-right-radius: 50% 5vh;
+        }
+
+        .grid-box {
+            width: 90vw;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2vw;
+            margin: 2vh 0;
+        }
+
+        .grid-item {
+            width: 100%;
+            height: 10vh;
+            background: lightblue;
+        }
+
+        .announcement {
+            width: 90vw;
+            height: 5vh;
+            background: orange;
+            margin-bottom: 2vh;
+        }
+
+        .balance {
+            width: 90vw;
+            height: 10vh;
+            background: green;
+            margin-bottom: 2vh;
+        }
+
+        .ad-banner {
+            width: 90vw;
+            height: 10vh;
+            background: purple;
+            margin-bottom: 2vh;
+        }
+
+        .finance-container {
+            width: 90vw;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            margin-bottom: 2vh;
+        }
+
+        .finance-header {
+            width: 100%;
+            height: 10vh;
+            background: lightgray;
+        }
+
+        .finance-grid {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .finance-item {
+            width: 30%;
+            height: 8vh;
+            background: lightblue;
+        }
+
+        .finance-recommend {
+            width: 100%;
+            height: 12vh;
+            background: pink;
+        }
+
+        .finance-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+        .finance-list-item {
+            width: 100%;
+            height: 8vh;
+            background: lightgreen;
+        }
+
+        .footer {
+            width: 100%;
+            height: 8vh;
+            background: gray;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .nav-item {
+            width: 20vw;
+            height: 5vh;
+            background: white;
+        }
+
+        .one {
+            position: absolute;
+            width: 17.18px;
+            height: 21px;
+            left: calc(50% - 17.18px/2 + 0.59px);
+            top: calc(50% - 21px/2 + 0.5px);
+            background: linear-gradient(148.41deg, #113ACA 9.68%, #3F6DFA 91.38%);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon-box"></div>
+            <div class="search-bar"></div>
+            <div class="icon-box"></div>
+            <div class="icon-box"></div>
+        </div>
+        <div class="banner"></div>
+        <div class="grid-box">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+        </div>
+        <div class="announcement"></div>
+        <div class="balance"></div>
+        <div class="ad-banner"></div>
+        <div class="finance-container">
+            <div class="finance-header"></div>
+            <div class="finance-grid">
+                <div class="finance-item"></div>
+                <div class="finance-item"></div>
+                <div class="finance-item"></div>
+            </div>
+            <div class="finance-recommend"></div>
+            <div class="finance-list">
+                <div class="finance-list-item"></div>
+                <div class="finance-list-item"></div>
+                <div class="finance-list-item"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="nav-item "></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+        <div class="nav-item"></div>
+    </div>
+</body>
+
+</html>

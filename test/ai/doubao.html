@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 顶部导航栏 */
+    .top-nav {
+      height: 8.77vh;
+      width: 100vw;
+      background-color: #ccc;
+      position: relative;
+    }
+
+    /* 资产信息区域 */
+    .asset-info {
+      height: 12.28vh;
+      width: 100vw;
+      background-color: #eee;
+    }
+
+    /* 存款/理财/全能存款分类区域 */
+    .category-area {
+      height: 7.89vh;
+      width: 100vw;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .category-box {
+      height: 100%;
+      width: 31.48%;
+      background-color: #ddd;
+      border-radius: 10px;
+    }
+
+    /* 推荐存款产品（高亮利率区域） */
+    .recommended-product {
+      height: 15.35vh;
+      width: 100vw;
+      background-color: red;
+    }
+
+    /* 定期存款列表 */
+    .deposit-list {
+      height: 26.32vh;
+      width: 100vw;
+      overflow-y: auto;
+    }
+
+    .deposit-item {
+      height: 50%;
+      width: 100%;
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* 底部导航栏 */
+    .bottom-nav {
+      height: 6.58vh;
+      width: 100vw;
+      background-color: #ccc;
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .nav-button {
+      width: 20%;
+      text-align: center;
+    }
+
+    /* 其他额外信息（隐藏部分） */
+    .extra-info {
+      width: 100vw;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <div class="top-nav">
+    <!-- 返回按钮、银行 LOGO 等 -->
+  </div>
+  <!-- 资产信息区域 -->
+  <div class="asset-info">
+    <!-- “我的资产”与“最新理财收益” -->
+  </div>
+  <!-- 存款/理财/全能存款分类区域 -->
+  <div class="category-area">
+    <div class="category-box"></div>
+    <div class="category-box"></div>
+    <div class="category-box"></div>
+  </div>
+  <!-- 推荐存款产品（高亮利率区域） -->
+  <div class="recommended-product"></div>
+  <!-- 定期存款列表 -->
+  <div class="deposit-list">
+    <div class="deposit-item"></div>
+    <div class="deposit-item"></div>
+  </div>
+  <!-- 底部导航栏 -->
+  <div class="bottom-nav">
+    <div class="nav-button">按钮 1</div>
+    <div class="nav-button">按钮 2</div>
+    <div class="nav-button">按钮 3</div>
+    <div class="nav-button">按钮 4</div>
+  </div>
+  <!-- 其他额外信息（隐藏部分） -->
+  <div class="extra-info">
+    <!-- 更多存款选项 -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>银行APP界面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      position: relative;
+      min-height: 100vh;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 主内容容器 */
+    .main-content {
+      padding-bottom: 6.58vh;
+      /* 底部导航栏高度 */
+    }
+
+    /* 顶部导航栏 */
+    .top-nav {
+      height: 8.77vh;
+      /* 200/2280 */
+      width: 100%;
+      background: #004a80;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    /* 资产信息区域 */
+    .assets-info {
+      height: 12.28vh;
+      /* 280/2280 */
+      width: 100%;
+      padding: 2vh 5%;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* 分类区域 */
+    .category-section {
+      height: 7.89vh;
+      /* 180/2280 */
+      width: 100%;
+      padding: 1vh 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .category-btn {
+      width: 31.4%;
+      /* 340/1080 */
+      height: 100%;
+      background: white;
+      border-radius: 2vh;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 推荐产品区域 */
+    .recommendation {
+      height: 15.35vh;
+      /* 350/2280 */
+      width: 90%;
+      margin: 2vh auto;
+      background: #d14343;
+      border-radius: 3vh;
+      color: white;
+      padding: 3vh;
+    }
+
+    /* 存款列表 */
+    .deposit-list {
+      width: 90%;
+      margin: 0 auto;
+      height: 26.32vh;
+      /* 600/2280 */
+      overflow-y: auto;
+    }
+
+    .deposit-item {
+      height: 13.16vh;
+      /* 300/2280 */
+      background: white;
+      border-radius: 2vh;
+      margin-bottom: 2vh;
+      padding: 2vh;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 底部导航 */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 6.58vh;
+      /* 150/2280 */
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #ddd;
+    }
+
+    .nav-btn {
+      width: 20%;
+      /* 216/1080 */
+      text-align: center;
+      padding: 1vh 0;
+      color: #666;
+    }
+
+    /* 辅助样式 */
+    .title {
+      font-size: 2.2vh;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1.8vh;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-content">
+    <!-- 顶部导航 -->
+    <header class="top-nav">
+      <div class="back-btn">←</div>
+      <div class="logo" style="margin-left: 4vw">银行LOGO</div>
+    </header>
+
+    <!-- 资产信息 -->
+    <section class="assets-info">
+      <div>
+        <div class="subtitle">我的资产</div>
+        <div class="title">¥ 256,800.00</div>
+      </div>
+      <div>
+        <div class="subtitle">最新理财收益</div>
+        <div class="title">+ ¥ 1,238.50</div>
+      </div>
+    </section>
+
+    <!-- 分类区域 -->
+    <section class="category-section">
+      <div class="category-btn"></div>
+      <div class="category-btn"></div>
+      <div class="category-btn"></div>
+    </section>
+
+    <!-- 推荐产品 -->
+    <section class="recommendation">
+      <div class="title">推荐存款产品</div>
+      <div class="subtitle" style="margin-top: 1vh">年利率 3.85%</div>
+    </section>
+
+    <!-- 存款列表 -->
+    <section class="deposit-list">
+      <div class="deposit-item">
+        <div class="title">一年期定期存款</div>
+        <div class="subtitle">年利率 2.75%</div>
+      </div>
+      <div class="deposit-item">
+        <div class="title">三年期大额存单</div>
+        <div class="subtitle">年利率 3.25%</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 底部导航 -->
+  <nav class="bottom-nav">
+    <div class="nav-btn">首页</div>
+    <div class="nav-btn">理财</div>
+    <div class="nav-btn">存款</div>
+    <div class="nav-btn">我的</div>
+  </nav>
+</body>
+
+</html>

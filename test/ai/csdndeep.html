@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>响应式布局</title>
+  <style>
+    /* 基准设置：基于设计稿750px宽度 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* 确保padding不破坏布局[^1] */
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      width: 100vw;
+      height: 13.33vh;
+      /* 对应设计稿100px高度 */
+      background: #2c3e50;
+      padding: 2.67vw;
+      /* 20px/7.5 */
+      color: white;
+    }
+
+    .main-content {
+      flex: 1;
+      width: 86.67vw;
+      /* 650px/7.5 */
+      margin: 4vh auto;
+      padding: 4vw;
+      /* 30px/7.5 */
+      background: #ecf0f1;
+      border-radius: 2.67vw;
+    }
+
+    .card {
+      width: 80vw;
+      margin: 2vh auto;
+      padding: 3.2vh 4vw;
+      background: white;
+      box-shadow: 0 1.07vw 3.2vw rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      width: 100vw;
+      height: 10.67vh;
+      /* 80px/7.5 */
+      background: #34495e;
+      color: white;
+      text-align: center;
+      padding: 2.67vw;
+    }
+
+    /* 字体使用vmin单位保证纵横比适配 */
+    h1 {
+      font-size: calc(16px + 1vmin);
+      margin-bottom: 1.6vh;
+    }
+
+    p {
+      font-size: calc(12px + 0.5vmin);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>响应式页面标题</h1>
+      <p>导航栏描述文字</p>
+    </header>
+
+    <main class="main-content">
+      <div class="card">
+        <h2>卡片标题</h2>
+        <p>响应式内容区域，使用相对单位适配不同屏幕</p>
+      </div>
+      <div class="card">
+        <h2>卡片标题</h2>
+        <p>第二个内容卡片，自动适应容器宽度</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© 2023 版权所有</p>
+    </footer>
+  </div>
+</body>
+
+</html>
